@@ -1,0 +1,64 @@
+PreMECA_________________________________= 1.0
+Proyecto________________________________= Estatico2D
+ Unidadeslongitud_______________________= Cm,Kg
+ Unidades_fuerza________________________= Cm,Kg
+ Numero_de_nodos________________________= 4
+ Numero_de_elementos____________________= 3
+ Numero_de_prescripciones_______________= 2
+ Numero_de_casos_de_carga_______________= 1
+ Tipo_de_estructura__art,_emp_o_comb____= 2
+ Numero_de_grados_de_libertad_por_nodo__= 3
+ Numero_de_materiales___________________= 2
+ Escritura_dat_en_res____________0_o_1__= 1
+ Escritura_de_mat_de_rigid_______0_o_1__= 1
+ Numero_de_dimensiones___________2_o_3__= 2
+ Numero_de_apoyos_elasticos_____________= 0
+ Numero_de_apoyos_inclinados____________= 0
+ Numero_de_familias___(optimizacion?)___= 1
+ Tipo_de_problema_____estatico_o_dinam__= 2
+ Numero_de_Frecuencias__________________= 6
+
+#\\\===============DEFINICION_DE_BARRAS===============/////
+#No_material Nod_ini Nod_fin [RNod_aux] [RTipo_de_barra] [Rot_sobre_eje_prop] #[ang_1;ang_2;ang_3]
+        1        1       2 
+        2        2       3 
+        1        4       3 
+        
+#\\\\\===============COORDENADAS_DE_NODOS===============/////
+#x y z
+     0         0     
+     0       300    
+   400       300     
+   400         0     
+     
+#\\\\\===============RESTRICCIONES===============/////
+#nodo x y [z] Rx [Ry] [Rz] Presc_x Presc_y [Presc_z] Presc_Rx [Presc_Ry]
+#[Presc_Rz]
+1 1 1 1            0            0            0            
+4 1 1 1            0            0            0            
+
+
+#\\===============DEFINICION_DE_MATERIALES===============/////
+#Modulo_Elastico Area Inerc_x [Inerc_y] [Inerc_Polar] [Modulo_de_Corte]
+#Peso_Esp. Tipo_Material Nombre_Cat Num_Sec
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 20 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 50
+
+#\\\\\===============APOYOS_ELASTICOS===============/////
+#Nodo x y [z] Rx [Ry] [Rz]
+
+#\\\\\===============APOYOS_INCLINADOS===============/////
+#Nodo Inclinacion
+
+#\\\\\================CASOS_DE_CARGA================/////
+#Titulo
+#NF_nodos NF_punt [NFpunt_y] NF_dist [NF_dist_y] [NF_triang] [NF_parabol]
+#F_peso_prop
+
+CASO_DE_CARGA
+2   1  1    0   0 0 
+2    1000    -1000  0
+3   -1000    -1000  0
+2   -1000.0      200.0
+2   -10.0
+

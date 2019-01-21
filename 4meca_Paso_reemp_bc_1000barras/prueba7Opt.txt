@@ -1,0 +1,17 @@
+Materiales  
+matva[ 1 ]= 5  
+matva[ 2 ]= 5  
+matva[ 3 ]= 4  
+matva[ 4 ]= 7  
+matva[ 5 ]= 18  
+matva[ 6 ]= 2  
+matva[ 7 ]= 18  
+matva[ 8 ]= 2  
+matva[ 9 ]= 9  
+matva[ 10 ]= 4  
+matva[ 11 ]= 7  
+matva[ 12 ]= 3  
+matva[ 13 ]= 9  
+matva[ 14 ]= 2  
+matva[ 15 ]= 9  
+matva[ 16 ]= 17  
