@@ -1,0 +1,51 @@
+This README is valid for all proposals
+
+
+*****************************INPUT*****************************************
+Instances:
+
+*16_bar.dat
+*40_bar.dat
+*80_bar.dat
+*120_bar.dat
+*80_bar_hor.dat
+*120_bar_hor.dat
+
+
+The instances are in the folder "Instancias".
+The instance to be evaluated / optimized is selected in the file "coman.dat".
+
+
+*****************************OUTPUT*****************************************
+
+The output files of the program are:
+
+*Instances / "" .res - related to structure efficiency data
+
+*" " .txt - print data of each generation (fitness, current generation and evaluations)
+
+
+*****************************COMPILATION*****************************************
+
+Inside of main folder do:
+
+make cleanall
+make
+
+
+*****************************EXECUTION*****************************************
+
+./meca #_execution
+
+ex. 
+./meca 1
+
+
+*****************************MECA_SOFTWARE*****************************************
+
+There are two options:
+
+Optimizer: Option by default and executes 1000 generations of the proposal
+
+Evaluator: To use the software as an evaluator of the structure just change in Instances/"" .dat line 18 "Tipo_de_problema" set number 2.
+

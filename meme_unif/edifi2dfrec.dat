@@ -1,0 +1,222 @@
+PreMECA_________________________________= 1.0
+Proyecto________________________________= Estatico2D
+ Unidadeslongitud_______________________= Cm,Kg
+ Unidades_fuerza________________________= Cm,Kg
+ Numero_de_nodos________________________= 31
+ Numero_de_elementos____________________= 42
+ Numero_de_prescripciones_______________= 5
+ Numero_de_casos_de_carga_______________= 1
+ Tipo_de_estructura__art,_emp_o_comb____= 2
+ Numero_de_grados_de_libertad_por_nodo__= 3
+ Numero_de_materiales___________________= 12
+ Escritura_dat_en_res____________0_o_1__= 1
+ Escritura_de_mat_de_rigid_______0_o_1__= 1
+ Numero_de_dimensiones___________2_o_3__= 2
+ Numero_de_apoyos_elasticos_____________= 0
+ Numero_de_apoyos_inclinados____________= 0
+ Numero_de_familias___(optimizacion?)___= 0
+ Tipo_de_problema_____estatico_o_dinam__= 2
+ Numero_de_Frecuencias__________________= 78
+
+#\\\===============DEFINICION_DE_BARRAS===============/////
+#No_material Nod_ini Nod_fin [RNod_aux] [RTipo_de_barra] [Rot_sobre_eje_prop] #[ang_1;ang_2;ang_3]
+1	1	6
+1	2	7
+1	3	8
+1	4	9
+1	5	10
+2	6	11
+2	7	12
+2       8       13
+2	9	14
+2	10	15
+3	11	16
+3	12	17
+3	13	18
+3	14	19
+3	15	20
+4	16	21
+4	17	22
+4	18	23
+4	19	24
+4	20	25
+6	6	7
+6	7	8
+6	8	9
+6	9	10
+7	26	11
+8	11	12
+8	12	13
+8	13	14
+8	14	15
+7	15	29
+9	27	16
+10	16	17
+10	17	18
+10	18	19
+10	19	20
+9	20	30
+11	28	21
+12	21	22
+12	22	23
+12	23	24
+12	24	25
+11	25	31
+        
+#\\\\\===============COORDENADAS_DE_NODOS===============/////
+#x y z
+0	0	
+600	0	
+1200	0	
+1800	0	
+2400	0	
+0	600	
+600	600	
+1200	600	
+1800	600	
+2400	600	
+0	900	
+600	900	
+1200    900
+1800	900	
+2400	900	
+0	1200	
+600	1200	
+1200	1200	
+1800	1200	
+2400	1200	
+0	1500	
+600	1500	
+1200	1500	
+1800	1500	
+2400	1500	
+-150	900	
+-150	1200	
+-150	1500	
+2550	900	
+2550	1200	
+2550	1500	
+     
+#\\\\\===============RESTRICCIONES===============/////
+#nodo x y [z] Rx [Ry] [Rz] Presc_x Presc_y [Presc_z] Presc_Rx [Presc_Ry]
+#[Presc_Rz]
+1	1	1	1	0	0	0	
+2	1	1	1	0	0	0	
+3	1	1	1	0	0	0	
+4	1	1	1	0	0	0	
+5	1	1	1	0	0	0
+
+
+#\\===============DEFINICION_DE_MATERIALES===============/////
+#Modulo_Elastico Area Inerc_x [Inerc_y] [Inerc_Polar] [Modulo_de_Corte]
+#Peso_Esp. Tipo_Material Nombre_Cat Num_Sec	
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+2.5e5 1600.0 2.13333e5 2.13333e5 4.26666e5 1.0e5 2.4e-3 3 CatalogoCONCR.dat 1 
+
+#\\\\\===============APOYOS_ELASTICOS===============/////
+#Nodo x y [z] Rx [Ry] [Rz]
+
+#\\\\\===============APOYOS_INCLINADOS===============/////
+#Nodo Inclinacion
+
+#\\\\\================CASOS_DE_CARGA================/////
+#Titulo
+#NF_nodos NF_punt [NFpunt_y] NF_dist [NF_dist_y] [NF_triang] [NF_parabol]
+#F_peso_prop
+
+Todo_el_conjunto_de_cargas
+5	8	23	0	0	1
+21	0	-10000	0	
+22	0	-10000	0	
+23	0	-10000	0	
+24	0	-10000	0	
+25	0	-10000	0	
+21	-10000	150
+23	-10000	450
+26	-10000	150
+28	-10000	450
+32	-10000	150
+34	-10000	450
+38	-10000	150
+40	-10000	450
+20	-10
+21	-10
+22	-10
+23	-10
+24	-10
+25	-10
+26	-10
+27	-10
+28	-10
+29	-10
+30	-10
+31	-10
+32	-10
+33	-10
+34	-10
+35	-10
+36	-10
+37	-10
+38	-10
+39	-10
+40	-10
+41	-10
+42	-10
+
+Cargas_en_nodos
+5	0	0	0	0	0
+21	0	-10000	0	
+22	0	-10000	0	
+23	0	-10000	0	
+24	0	-10000	0	
+25	0	-10000	0	
+
+Cargas_puntuales_en_barras
+0	8	0	0	0	0
+21	-10000	150
+23	-10000	450
+26	-10000	150
+28	-10000	450
+32	-10000	150
+34	-10000	450
+38	-10000	150
+40	-10000	450
+
+Cargas_uniformemente_distribuidas
+0	0	23	0	0	0
+20	-10
+21	-10
+22	-10
+23	-10
+24	-10
+25	-10
+26	-10
+27	-10
+28	-10
+29	-10
+30	-10
+31	-10
+32	-10
+33	-10
+34	-10
+35	-10
+36	-10
+37	-10
+38	-10
+39	-10
+40	-10
+41	-10
+42	-10
+
+Carga_por_peso_propio
+0	0	0	0	0	1
