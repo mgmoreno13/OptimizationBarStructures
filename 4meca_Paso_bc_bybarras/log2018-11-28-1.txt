@@ -1,6 +1,0 @@
-2018-11-28 1:50:57 [Mensaje]: Esperando...
-2018-11-28 1:50:57 [Mensaje]: Proceso hijo terminado con pid: 16046, No: 1
-2018-11-28 1:50:57 [Alerta]: Aviso: un proceso terminó de manera anormal: 255
-2018-11-28 1:50:57 [Mensaje]: Esperando...
-2018-11-28 1:50:57 [Mensaje]: Proceso hijo terminado con pid: 16048, No: 2
-2018-11-28 1:50:57 [Alerta]: Aviso: un proceso terminó de manera anormal: 255
